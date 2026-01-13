@@ -68,11 +68,10 @@ func main() {
 
 	// Generate QR in terminal
 	config := qrterminal.Config{
-		Level:     qrterminal.L,
-		Writer:    os.Stdout,
-		BlackChar: qrterminal.BLACK,
-		WhiteChar: qrterminal.WHITE,
-		QuietZone: 1,
+		Level:      qrterminal.L,
+		Writer:     os.Stdout,
+		HalfBlocks: true,
+		QuietZone:  1,
 	}
 	qrterminal.GenerateWithConfig(enrollData.OTPAuthURL, config)
 
